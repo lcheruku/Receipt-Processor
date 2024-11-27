@@ -3,11 +3,11 @@ This is the Public Repository containing web service for Receipt Processor Chall
 
 Here are few things I want you to consider before you move further ahead.
 
-Web Service used - RESTful web service
+* Web Service used - RESTful web service
 
-Language selected - Go Language
+* Language selected - Go Language
 
-IDE used - Eclipse with GoClipse extension and Golang Development Tooling
+* IDE used - Eclipse with GoClipse extension and Golang Development Tooling
 
 ## What are the different edge cases I came across?
 
@@ -19,3 +19,45 @@ IDE used - Eclipse with GoClipse extension and Golang Development Tooling
 6. **HTTP methods for endpoints** - Process Receipts endpoint accepts only POST whereas Get Points endpoint accepts only GET. Using methods other than what were assigned like using GET for Process Receipts and PUT for Get Points etc., would result in "Method not allowed" error. 
 
 ## Files in my project directory
+
+1. **api.yml**  
+
+   Description: yml file containing OpenAPI documentation.
+
+   Directory: Receipt-Processor/config
+   
+2. **morning-receipt.json**
+   
+   Description: Example JSON payload.
+   
+   Directory: Receipt-Processor/examples 
+    
+3. **simple-receipt.json**
+
+   Description: Example JSON payload.
+   
+   Directory: Receipt-Processor/examples 
+
+4. **main.go**
+
+   Description: Entry point of the Go application.
+
+   Directory: Main folder
+
+5. **receipt-handler.go**
+
+    Description: Creates http handlers for both API endpoints.
+
+    Directory: Receipt-Processor/handlers
+
+6. **Receipt.go**
+
+   Description: Determines the structure of the Receipt in JSON format. Contains Retailer, PurchaseDate, PurchaseTiem, Items, and Total.
+
+   Directory: Receipt-Processor/models
+
+7. **point_calculator.go**
+
+   Description: Containes CalculatePoints function responsible for calculating points based on the given rules.
+
+   Directory: Receipt-Processor/services
