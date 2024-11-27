@@ -1,7 +1,9 @@
 # Solution for Receipt Processor Challenge
 This is the Public Repository containing web service for Receipt Processor Challenge.
 
-Web Service - RESTful web service
+Here are two things I want you to consider before you move ahead with the code.
 
-Language - Go Language
+Web Service used - RESTful web service
+
+Language selected - Go Language
 
