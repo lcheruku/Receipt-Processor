@@ -61,3 +61,47 @@ Here are few things I want you to consider before you move further ahead.
    Description: Containes CalculatePoints function responsible for calculating points based on the given rules.
 
    Directory: Receipt-Processor/services
+
+## Results:
+
+1. For the first example test case i.e., morning-receipt.json, the output is,
+      1. Process Receipts
+         * Method: POST
+         * Path: *http://localhost:8080/receipts/process*
+         
+         Response:
+         
+               {
+                "id": "c3c55e53-259a-4ca6-aacd-68d3f9aa3493"
+               }
+
+      2. Get Points
+         * Method: GET
+         * Path: *http://localhost:8080/receipts/c3c55e53-259a-4ca6-aacd-68d3f9aa3493/points*
+         
+         Response:
+         
+               {
+                "points": 15
+               }
+
+2. For the second example test case i.e., simple-receipt.json, the output is,
+      1. Process Receipts
+         * Method: POST
+         * Path: *http://localhost:8080/receipts/process*
+         
+         Response:
+         
+               {
+                "id": "2aae0161-b571-40e7-a2cd-e115349c6398"
+               }
+
+      2. Get Points
+         * Method: GET
+         * Path: *http://localhost:8080/receipts/2aae0161-b571-40e7-a2cd-e115349c6398/points*
+         
+         Response:
+         
+               {
+                "points": 31
+               } 
